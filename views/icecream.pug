@@ -2,5 +2,29 @@ extends layout
 
 block content
   h1= title
-
+  p Welcom to icecream
+  div(class="container-fluid")
+        div(class="row")
+            -
+                let results=[{
+                        "flavour": "Dark Chocolate",
+                        "quantity": 5,
+                        "cost": 15
+                        },
+                        {
+                        "flavour": "Strawberry",
+                        "quantity": 5,
+                        "cost": 12
+                        },
+                        {
+                        "flavour": "Vanilla",
+                        "quantity": 4,
+                        "cost": 10
+                        }]
+            each a,b  in results 
+                div(class="col-sm-2") #{a.flavour}
+                div(class="col-sm-2") #{a.quantity}
+                div(class="col-sm-2") #{a.cost}
   
+    
+        
