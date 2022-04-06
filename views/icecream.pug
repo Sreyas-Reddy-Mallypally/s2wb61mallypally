@@ -22,9 +22,13 @@ block content
                         "cost": 10
                         }]
             each a,b  in results 
-                div(class="col-sm-2") #{a.flavour}
-                div(class="col-sm-2") #{a.quantity}
-                div(class="col-sm-2") #{a.cost}
+                div(class="col-sm-2" onclick=`buy(${b})`) #{a.flavour}
+                div(class="col-sm-2" onclick=`buy(${b})`) #{a.quantity}
+                div(class="col-sm-2" onclick=`buy(${b})`) #{a.cost}
+  script.                
+        function buy(x){
+              alert(`You purchased item ${x+1}`)
+        }
   
     
         
