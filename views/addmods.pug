@@ -8,13 +8,13 @@ block content
         cols= Number(query.cols)
     if !Number.isInteger(rows)
         p Mentioned rows are not integers
-    else if !Number.isInteger(cols)
+    if !Number.isInteger(cols)
         p Mentioned columns are not integers
-    else if rows < 0 || rows > 10
+    if rows < 1 || rows > 10
         p Mentioned rows are in out of range
-    else if cols < 0 || cols > 10
+    if cols < 1 || cols > 10
         p Mentioned columns are in out of range
-    else
+
        table    
             - for(let i=0; i<rows; i++) {
                tr
